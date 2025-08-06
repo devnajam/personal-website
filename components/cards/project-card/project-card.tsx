@@ -7,8 +7,8 @@ interface Props {
   description: string;
   year: string;
   skills: string[];
-  githubLink: string;
-  demoLink: string;
+  githubLink?: string;
+  demoLink?: string;
 }
 
 export const ProjectCard: React.FC<Props> = (props) => {
@@ -24,22 +24,26 @@ export const ProjectCard: React.FC<Props> = (props) => {
         {props.skills.join(", ")}
       </div>
       <div className="flex gap-5 mt-4 text-sm lg:text-base justify-end">
-        <a
-          href={props.githubLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex gap-2 hover:underline underline-offset-2 items-center"
-        >
-          <FaGithub size={18} /> View code
-        </a>
-        <a
-          href={props.demoLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex gap-2 hover:underline underline-offset-2 items-center"
-        >
-          <TbExternalLink size={18} /> View live
-        </a>
+        {props.githubLink && (
+          <a
+            href={props.githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex gap-2 hover:underline underline-offset-2 items-center"
+          >
+            <FaGithub size={18} /> View code
+          </a>
+        )}
+        {props.demoLink && (
+          <a
+            href={props.demoLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex gap-2 hover:underline underline-offset-2 items-center"
+          >
+            <TbExternalLink size={18} /> View live
+          </a>
+        )}
       </div>
     </CardContainer>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Navbar } from "@/components/layout/navbar/navbar";
+import { Footer } from "@/components/layout/footer/footer";
 
 import "./globals.css";
 
@@ -17,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`antialiased pb-20`}>
+      <body className={`antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -26,6 +27,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

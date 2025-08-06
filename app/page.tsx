@@ -4,6 +4,8 @@ import { ProfileBanner } from "@/components/profile-banner/profile-banner";
 import { CardContainer } from "@/components/cards/card-container/card-container";
 import { ExperienceCard } from "@/components/cards/experience-card/experience-card";
 import { ProjectCard } from "@/components/cards/project-card/project-card";
+import { Contact } from "@/components/contact/contact";
+import { Newsletter } from "@/components/newsletter/newsletter";
 import { skills, experience, projects } from "@/data/data";
 
 export default function Home() {
@@ -84,6 +86,12 @@ export default function Home() {
             ))}
           </div>
         </div>
+
+        <div className="flex flex-col gap-4 mt-10 pt-10" id="newsletter">
+          <h1 className="text-2xl font-bold">Newsletter</h1>
+          <Newsletter />
+        </div>
+        <Contact />
       </div>
     </Box>
   );

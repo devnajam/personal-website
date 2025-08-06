@@ -6,6 +6,7 @@ import {
   FaDownload,
   FaBars,
 } from "react-icons/fa6";
+import { SiLeetcode } from "react-icons/si";
 import { Box } from "@/components/containers/box/box";
 import { Button } from "@/components/ui/button";
 import {
@@ -25,12 +26,48 @@ export const Navbar = () => {
         <div className="flex gap-8 items-center">
           <h1 className="text-xl font-bold">Ni.</h1>
           <div className="gap-5 text-sm hidden xl:flex">
-            <Link href="/#skills">Skills</Link>
-            <Link href="/#experience">Experience</Link>
-            <Link href="/#education">Education</Link>
-            <Link href="/#projects">Projects</Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/#contact">Contact</Link>
+            <Link
+              href="/#skills"
+              className="text-foreground/80 hover:text-foreground transition-colors "
+            >
+              Skills
+            </Link>
+            <Link
+              href="/#experience"
+              className="text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Experience
+            </Link>
+            <Link
+              href="/#education"
+              className="text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Education
+            </Link>
+            <Link
+              href="/#projects"
+              className="text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Projects
+            </Link>
+            <Link
+              href="/blog"
+              className="text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Blog
+            </Link>
+            <Link
+              href="/#newsletter"
+              className="text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Newsletter
+            </Link>
+            <Link
+              href="/#contact"
+              className="text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Contact
+            </Link>
           </div>
         </div>
 
@@ -43,6 +80,10 @@ export const Navbar = () => {
           </a>
           <a href="https://github.com/devnajam" target="_blank">
             <FaGithub size={20} />
+          </a>
+
+          <a href="https://github.com/devnajam" target="_blank">
+            <SiLeetcode size={20} />
           </a>
           <a href="/Najam's Resume.pdf" target="_blank">
             <Button variant="outline" className="font-normal">
@@ -89,6 +130,11 @@ export const Navbar = () => {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
+                  <Link href="/#newsletter" className="w-full">
+                    Newsletter
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
                   <Link href="/#contact" className="w-full">
                     Contact
                   </Link>
@@ -120,6 +166,15 @@ export const Navbar = () => {
                   className="flex items-center gap-2 w-full"
                 >
                   <FaLinkedin size={20} /> LinkedIn
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <a
+                  href="https://leetcode.com/u/devnajam/"
+                  target="_blank"
+                  className="flex items-center gap-2 w-full"
+                >
+                  <SiLeetcode size={20} /> LeetCode
                 </a>
               </DropdownMenuItem>
               <DropdownMenuSeparator />
