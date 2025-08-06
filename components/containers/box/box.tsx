@@ -5,13 +5,13 @@ const boxVariants = cva("px-4 mx-auto", {
   variants: {
     size: {
       sm: "max-w-4xl",
-      base: "max-w-6xl",
+      md: "max-w-6xl",
       lg: "max-w-7xl",
       xl: "max-w-[1440px]",
     },
   },
   defaultVariants: {
-    size: "base",
+    size: "lg",
   },
 });
 
