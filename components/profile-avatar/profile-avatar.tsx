@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { MdOutlineVerifiedUser } from "react-icons/md";
 import { cn } from "@/lib/utils";
 
 interface ProfileAvatarProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -19,8 +20,13 @@ export const ProfileAvatar = (props: ProfileAvatarProps) => {
         />
       </div>
       <div>
-        <h1 className="lg:text-2xl text-xl font-medium">{props.name}</h1>
-        <p className="text-sm lg:text-base">{props.bio}</p>
+        <h1 className="lg:text-2xl text-xl font-medium flex items-center gap-2">
+          {props.name}
+          <MdOutlineVerifiedUser size={20} className="text-primary" />
+        </h1>
+        <p className="text-sm lg:text-base max-w-[300px] lg:max-w-full">
+          {props.bio}
+        </p>
       </div>
     </div>
   );
