@@ -27,8 +27,8 @@ export const Navbar = () => {
           <div className="gap-5 text-sm hidden xl:flex">
             <Link href="/#skills">Skills</Link>
             <Link href="/#experience">Experience</Link>
-            <Link href="/#projects">Projects</Link>
             <Link href="/#education">Education</Link>
+            <Link href="/#projects">Projects</Link>
             <Link href="/blog">Blog</Link>
             <Link href="/#contact">Contact</Link>
           </div>
@@ -71,13 +71,13 @@ export const Navbar = () => {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/#projects" className="w-full">
-                    Projects
+                  <Link href="/#education" className="w-full">
+                    Education
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/#education" className="w-full">
-                    Education
+                  <Link href="/#projects" className="w-full">
+                    Projects
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuGroup>

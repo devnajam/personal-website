@@ -166,3 +166,15 @@ export const experience = [
     ],
   },
 ];
+
+export const projects = [
+  {
+    year: "2023",
+    title: "AuthentiChain",
+    description:
+      "Engineered a blockchain-based system on BSC using ERC-721, MetaMask, React, Node.js, and Solidity to fight counterfeit products by linking supply chain and customer data on-chain, enhancing traceability and authenticity.",
+    skills: ["React", "Node.js", "Express.js", "Solidity", "MetaMask", "BSC"],
+    githubLink: "https://github.com/user/project1",
+    demoLink: "https://project1.com",
+  },
+];
