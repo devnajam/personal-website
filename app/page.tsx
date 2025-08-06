@@ -2,7 +2,8 @@ import { Box } from "@/components/containers/box/box";
 import { ProfileAvatar } from "@/components/profile-avatar/profile-avatar";
 import { ProfileBanner } from "@/components/profile-banner/profile-banner";
 import { CardContainer } from "@/components/cards/card-container/card-container";
-import { skills } from "@/data/data";
+import { ExperienceCard } from "@/components/cards/experience-card/experience-card";
+import { skills, experience } from "@/data/data";
 
 export default function Home() {
   return (
@@ -40,6 +41,17 @@ export default function Home() {
               </div>
             ))}
           </CardContainer>
+        </div>
+
+        <div className="flex flex-col gap-4" id="experience">
+          <h1 className="text-2xl font-bold">Work Experience</h1>
+          <div className="space-y-4">
+            {experience.map((experience) => (
+              <CardContainer key={experience.company}>
+                <ExperienceCard {...experience} />
+              </CardContainer>
+            ))}
+          </div>
         </div>
       </div>
     </Box>

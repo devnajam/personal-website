@@ -13,7 +13,9 @@ export const ModeDecorator = (Story: any) => {
       <div className="absolute top-4 right-4 z-50">
         <ThemeToggle />
       </div>
-      <Story />
+      <div className="pt-20">
+        <Story />
+      </div>
     </ThemeProvider>
   );
 };
