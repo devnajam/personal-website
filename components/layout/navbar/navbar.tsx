@@ -21,7 +21,7 @@ import {
 export const Navbar = () => {
   return (
     <div>
-      <Box className="h-14 xl:h-20 flex justify-between items-center" size="lg">
+      <Box className="h-14 xl:h-20 flex justify-between items-center">
         <div className="flex gap-8 items-center">
           <h1 className="text-xl font-bold">Ni.</h1>
           <div className="gap-5 text-sm hidden xl:flex">
