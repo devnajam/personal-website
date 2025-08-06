@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -16,6 +15,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Globe } from "@/components/magicui/globe";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -157,13 +157,8 @@ export const Contact = () => {
           </form>
         </Form>
 
-        <div className="relative hidden lg:block h-full w-full">
-          <Image
-            src="/images/blue-orange.avif"
-            alt="Contact Image"
-            fill
-            className="object-cover rounded-xl"
-          />
+        <div className="relative lg:h-full w-full h-[350px]">
+          <Globe className="lg:-top-20" />
         </div>
       </div>
     </div>
