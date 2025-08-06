@@ -176,3 +176,76 @@ export const projects = [
     skills: ["React", "Node.js", "Express.js", "Solidity", "MetaMask", "BSC"],
   },
 ];
+
+export const navbarLinks = [
+  { name: "Skills", link: "/#skills" },
+  { name: "Experience", link: "/#experience" },
+  { name: "Education", link: "/#education" },
+  { name: "Projects", link: "/#projects" },
+  { name: "Blog", link: "/blog" },
+  { name: "Newsletter", link: "/#newsletter" },
+  { name: "Contact", link: "/#contact" },
+];
+
+export const mobileNavbarLinks = [
+  {
+    category: "Professional",
+    links: [
+      { name: "Skills", link: "/#skills" },
+      { name: "Experience", link: "/#experience" },
+      { name: "Education", link: "/#education" },
+      { name: "Projects", link: "/#projects" },
+    ],
+  },
+  {
+    category: "Quick Links",
+    links: [
+      { name: "Blog", link: "/blog" },
+      { name: "Newsletter", link: "/#newsletter" },
+      { name: "Contact", link: "/#contact" },
+    ],
+  },
+];
+
+export const footerLinks = [
+  {
+    category: "Professional",
+    links: [
+      { name: "Skills", link: "/#skills" },
+      { name: "Experience", link: "/#experience" },
+      { name: "Education", link: "/#education" },
+      { name: "Projects", link: "/#projects" },
+    ],
+  },
+  {
+    category: "Quick Links",
+    links: [
+      { name: "Blog", link: "/blog" },
+      { name: "Newsletter", link: "/#newsletter" },
+      { name: "Contact", link: "/#contact" },
+    ],
+  },
+];
+
+export const socialLinks = [
+  {
+    name: "GitHub",
+    link: "https://github.com/devnajam",
+    icon: "fa:FaGithub",
+  },
+  {
+    name: "Twitter",
+    link: "https://x.com/devnajam",
+    icon: "fa:FaXTwitter",
+  },
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/devnajam/",
+    icon: "fa:FaLinkedin",
+  },
+  {
+    name: "LeetCode",
+    link: "https://leetcode.com/devnajam/",
+    icon: "si:SiLeetcode",
+  },
+];

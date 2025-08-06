@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { FaLinkedin, FaXTwitter, FaGithub, FaDownload } from "react-icons/fa6";
 import { Box } from "@/components/containers/box/box";
-import { Button } from "@/components/ui/button";
-import { SiLeetcode } from "react-icons/si";
 import { ThemeToggle } from "@/components/theme/theme-toggle/theme-toggle";
+import { IconMapper } from "@/components/icon-mapper/icon-mapper";
+import { footerLinks, socialLinks } from "@/data/data";
 
 export const Footer = () => {
   return (
@@ -18,91 +17,31 @@ export const Footer = () => {
             </p>
           </div>
 
-          <div className="space-y-4">
-            <h4 className="font-semibold text-base">Professional</h4>
-            <div className="flex flex-col">
-              <Link
-                href="/#skills"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors py-1"
-              >
-                Skills
-              </Link>
-              <Link
-                href="/#experience"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors py-1"
-              >
-                Experience
-              </Link>
-              <Link
-                href="/#projects"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors py-1"
-              >
-                Projects
-              </Link>
-              <Link
-                href="/#education"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors py-1"
-              >
-                Education
-              </Link>
+          {footerLinks.map((link) => (
+            <div key={link.category}>
+              <h4 className="font-semibold text-base">{link.category}</h4>
+              <div className="flex flex-col">
+                {link.links.map((link) => (
+                  <Link
+                    href={link.link}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors py-1"
+                    key={link.name}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
-
-          <div className="space-y-4">
-            <h4 className="font-semibold text-base">Quick Links</h4>
-            <div className="flex flex-col">
-              <Link
-                href="/blog"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors py-1"
-              >
-                Blog
-              </Link>
-              <Link
-                href="/#newsletter"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors py-1"
-              >
-                Newsletter
-              </Link>
-              <Link
-                href="/#contact"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors py-1"
-              >
-                Contact
-              </Link>
-            </div>
-          </div>
+          ))}
 
           <div className="space-y-4">
             <h4 className="font-semibold text-base">Connect</h4>
             <div className="flex gap-6">
-              <a
-                href="https://www.linkedin.com/in/devnajam/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin size={20} />
-              </a>
-              <a
-                href="https://x.com/devnajam"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaXTwitter size={20} />
-              </a>
-              <a
-                href="https://github.com/devnajam"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub size={20} />
-              </a>
-              <a
-                href="https://leetcode.com/devnajam"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <SiLeetcode size={20} />
-              </a>
+              {socialLinks.map((link) => (
+                <a href={link.link} target="_blank" key={link.name}>
+                  <IconMapper iconName={link.icon} size={20} />
+                </a>
+              ))}
             </div>
           </div>
         </div>
@@ -111,11 +50,11 @@ export const Footer = () => {
           <p className="text-sm text-muted-foreground">
             © 2025 Najam Iftikhar. All rights reserved.
           </p>
-          <p className="text-sm text-muted-foreground flex items-center gap-3">
-            <ThemeToggle />
+          <p className="text-sm text-muted-foreground flex-col lg:flex-row flex items-center gap-3">
             <span className="inline-block">
               Built with Next.js, TypeScript, Tailwind CSS & shadcn/ui
             </span>
+            <ThemeToggle />
           </p>
         </div>
       </Box>
