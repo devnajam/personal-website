@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
-interface ProfileAvatarProps {
+interface ProfileAvatarProps extends React.HTMLAttributes<HTMLDivElement> {
   image: string;
   name: string;
   bio: string;
@@ -8,7 +9,7 @@ interface ProfileAvatarProps {
 
 export const ProfileAvatar = (props: ProfileAvatarProps) => {
   return (
-    <div className="flex flex-col lg:gap-4 gap-2">
+    <div className={cn("flex flex-col lg:gap-4 gap-2", props.className)}>
       <div className="relative rounded-full lg:w-40 lg:h-40 w-28 h-28 border-4">
         <Image
           src={props.image}
