@@ -44,7 +44,10 @@ export const IconMapper: React.FC<IconMapperProps> = ({
   return (
     <IconComponent
       size={size}
-      className={cn("text-foreground", className)}
+      className={cn(
+        "text-foreground/70 transition-colors hover:text-foreground",
+        className
+      )}
       {...rest}
     />
   );
