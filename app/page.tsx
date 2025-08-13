@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { Box } from "@/components/containers/box/box";
 import { ProfileAvatar } from "@/components/profile-avatar/profile-avatar";
 import { ProfileBanner } from "@/components/profile-banner/profile-banner";
@@ -7,6 +8,12 @@ import { ProjectCard } from "@/components/cards/project-card/project-card";
 import { Contact } from "@/components/contact/contact";
 import { Newsletter } from "@/components/newsletter/newsletter";
 import { skills, experience, projects } from "@/data/data";
+
+export const metadata: Metadata = {
+  title: "Najam Iftikhar | Senior Software Engineer",
+  description:
+    "Senior Software Engineer with 4+ years of experience in building scalable web applications using Node.js, React, Next.js, and Tailwind CSS.",
+};
 
 export default function Home() {
   return (

@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/footer/footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://najamiftikhar.com"),
   title: "Najam Iftikhar | Senior Software Engineer",
   description:
     "Senior Full Stack Developer with 4+ years of experience delivering 25+ web apps and 5 MVPs that accelerated product validation by 50%. Completed 48 self-employed projects with a perfect 5-star client rating. Scraped 800K+ leads to boost outreach by 60% and improved delivery speed by 50% through DevOps.",
