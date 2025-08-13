@@ -25,7 +25,7 @@ export const Small: Story = {
 
 export const Base: Story = {
   args: {
-    size: "base",
+    size: "md",
     children: "This is a base box (max-w-3xl)",
   },
 };
